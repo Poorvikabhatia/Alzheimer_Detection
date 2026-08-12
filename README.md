@@ -1,36 +1,155 @@
-Alzheimer's Detection Web App
+# 🧠 Alzheimer's Disease Detection Web App
 
+A machine learning-based web application that predicts the likelihood of Alzheimer's disease using patient medical, cognitive, and lifestyle-related information.
 
-About the Project : Alzheimer’s is a serious neurodegenerative disease that affects memory, thinking, and behavior. Early detection can help slow its progression and improve quality of life.This project uses a machine learning model (Random Forest Classifier) trained on medical and lifestyle data to predict the likelihood of Alzheimer’s.
+## 📌 About the Project
 
-Features :
+Alzheimer's disease is a progressive neurodegenerative condition that primarily affects memory, thinking, and daily activities. Early identification of potential risk indicators can support further medical evaluation.
 
-🖥️ User-friendly web interface using Streamlit
+This project uses a **Random Forest Classifier** trained on tabular patient data to classify whether a patient is likely to have Alzheimer's disease based on selected health and assessment features.
 
-✅ Predicts Alzheimer's diagnosis (Yes/No) based on medical inputs
+The trained model is integrated into a **Streamlit web application**, allowing users to enter patient information and receive an instant prediction.
 
-📊 Uses Random Forest for accurate classification
+## ✨ Features
 
+- 🖥️ Interactive and user-friendly web interface built with Streamlit
+- 🧠 Machine learning-based Alzheimer's disease prediction
+- 🌲 Random Forest Classifier for binary classification
+- 📊 Uses medical, cognitive, and lifestyle-related features
+- ⚡ Provides instant prediction through the web application
+- 📱 Simple interface that can be used without writing any code
 
-Inputs Taken from the User : 
-Age,
-Alcohol Consumption,
-Physical Activity,
-Diet Quality,
-Sleep Quality,
-Systolic & Diastolic Blood Pressure,
-Total, LDL, HDL, and Triglyceride Cholesterol,
-MMSE (Mini-Mental State Examination),
-Functional Assessment Score,
-Memory Complaints,
-Behavioral Problems,
-ADL (Activities of Daily Living)
+## 📋 Inputs Used for Prediction
 
+The application takes the following information from the user:
 
-Built With : 
-Python,
-Pandas, NumPy, Scikit-learn – for data processing and machine learning,
-Streamlit – for building the web interface
+- **Age**
+- **Alcohol Consumption**
+- **Physical Activity**
+- **Diet Quality**
+- **Sleep Quality**
+- **Systolic Blood Pressure**
+- **Diastolic Blood Pressure**
+- **Total Cholesterol**
+- **LDL Cholesterol**
+- **HDL Cholesterol**
+- **Triglycerides**
+- **MMSE (Mini-Mental State Examination) Score**
+- **Functional Assessment Score**
+- **Memory Complaints**
+- **Behavioral Problems**
+- **ADL (Activities of Daily Living)**
 
+The model predicts the following output:
 
-Disclaimer : This tool is for educational and demonstration purposes only. It is not intended for medical diagnosis or clinical decision-making.
+- `0` → No Alzheimer's detected
+- `1` → Alzheimer's detected
+
+## 🤖 Machine Learning Model
+
+The project uses a **Random Forest Classifier** for prediction.
+
+The model was trained using tabular patient data and evaluated using:
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
+
+The final model achieved approximately **94% accuracy** on the test dataset.
+
+## 🛠️ Technologies Used
+
+- **Python** – Programming language
+- **Pandas** – Data manipulation and preprocessing
+- **NumPy** – Numerical computations
+- **Scikit-learn** – Machine learning model development and evaluation
+- **Matplotlib / Seaborn** – Data visualization
+- **Jupyter Notebook** – Model development and experimentation
+- **Streamlit** – Web application development
+- **Pickle** – Saving and loading the trained model
+
+## 📂 Project Structure
+
+```text
+Alzheimer_Detection/
+│
+├── Alzheimer_Detection.py
+├── Alzheimer_Detection_Model.pkl
+├── alzheimer_detection_project.ipynb
+├── requirements.txt
+└── README.md
+```
+
+## 🚀 How to Run the Project Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Poorvikabhatia/Alzheimer_Detection.git
+```
+
+### 2. Navigate to the project folder
+
+```bash
+cd Alzheimer_Detection
+```
+
+### 3. Install the required dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Streamlit application
+
+```bash
+python -m streamlit run Alzheimer_Detection.py
+```
+
+The application will open automatically in your default web browser.
+
+## 📊 Project Workflow
+
+```text
+Patient Data
+     ↓
+Data Preprocessing
+     ↓
+Feature Selection
+     ↓
+Random Forest Classifier
+     ↓
+Model Evaluation
+     ↓
+Saved Trained Model
+     ↓
+Streamlit Web Application
+     ↓
+Alzheimer's Prediction
+```
+
+## 🔮 Future Improvements
+
+Some possible improvements for future versions include:
+
+- Adding more machine learning algorithms for comparison
+- Improving model performance through hyperparameter tuning
+- Adding probability/confidence visualization
+- Including additional clinically relevant features
+- Deploying the application online
+- Improving the user interface and accessibility
+
+## ⚠️ Disclaimer
+
+This project is developed for **educational and demonstration purposes only**.
+
+The predictions generated by this application should **not be considered a medical diagnosis or used for clinical decision-making**. A qualified healthcare professional should always be consulted for medical evaluation and diagnosis.
+
+## 👩‍💻 Author
+
+**Poorvi Bhatia**
+
+Electronics and Communication Engineering Student  
+Interested in Machine Learning, Data Analytics, IoT, and Embedded Systems.
